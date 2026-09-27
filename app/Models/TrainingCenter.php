@@ -4,10 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\ApiQueryScopes;
 
 class TrainingCenter extends Model
 {
-    use HasFactory;
+    use ApiQueryScopes, HasFactory;
+
+    protected $fillable = ['name', 'location'];
+
+    protected function apiQueryOptions(): array
+    {
+        return [
+            'included' => ['teachers', 'courses'],
+            'filter' => ['id', 'name', 'location'],
+            'sort' => ['id', 'name', 'location'],
+        ];
+    }
 
     /**
      * Get the teachers for this training center.

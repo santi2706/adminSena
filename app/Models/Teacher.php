@@ -4,10 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\ApiQueryScopes;
 
 class Teacher extends Model
 {
-    use HasFactory;
+    use ApiQueryScopes, HasFactory;
+
+    protected $fillable = ['name', 'email', 'area_id', 'training_center_id'];
+
+    protected function apiQueryOptions(): array
+    {
+        return [
+            'included' => ['area', 'trainingCenter', 'courses'],
+            'filter' => ['id', 'name', 'email', 'area_id', 'training_center_id'],
+            'sort' => ['id', 'name', 'email'],
+        ];
+    }
 
     /**
      * Get the area that the teacher belongs to.

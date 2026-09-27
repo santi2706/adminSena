@@ -4,10 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Concerns\ApiQueryScopes;
 
 class areas extends Model
 {
-    use HasFactory;
+    use ApiQueryScopes, HasFactory;
+
+    protected $fillable = ['name'];
+
+    protected function apiQueryOptions(): array
+    {
+        return [
+            'included' => ['teachers', 'courses'],
+            'filter' => ['id', 'name'],
+            'sort' => ['id', 'name'],
+        ];
+    }
 
     /**
      * Get the teachers for this area.
