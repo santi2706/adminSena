@@ -3,6 +3,7 @@ use App\Http\Controllers\ApprenticeController;
 use App\Http\Controllers\AreasController;
 use App\Http\Controllers\ComputerController;
 use App\Http\Controllers\CourseController;
+use App\Http\Controllers\CourseTeacherController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\TrainingCenterController;
 use Illuminate\Http\Request;
@@ -34,9 +35,16 @@ Route::get('ping', function () {
 
 
 
-Route::apiResource('teachers', TeacherController::class);
+// ===== ENTIDADES FUERTES (lo que pide el instructor por ahora) =====
+// Fuertes = no dependen de otra tabla para existir (no tienen foráneas)
 Route::apiResource('areas', AreasController::class);
 Route::apiResource('training-centers', TrainingCenterController::class);
-Route::apiResource('courses', CourseController::class);
 Route::apiResource('computers', ComputerController::class);
-Route::apiResource('apprentices', ApprenticeController::class);
+
+// ===== ENTIDADES DÉBILES (pendiente: el instructor dice "posteriormente") =====
+// Débiles = necesitan que exista un registro padre primero (tienen foráneas)
+// Para activarlas más adelante solo hay que quitar el // delante de cada línea:
+// Route::apiResource('teachers', TeacherController::class);
+// Route::apiResource('courses', CourseController::class);
+// Route::apiResource('course-teachers', CourseTeacherController::class);
+// Route::apiResource('apprentices', ApprenticeController::class);

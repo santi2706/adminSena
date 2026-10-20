@@ -1,0 +1,328 @@
+﻿{
+    "item":  [
+                 {
+                     "name":  "0. Pruebas rapidas",
+                     "item":  [
+                                  {
+                                      "name":  "GET ping",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/ping",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "GET hola",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/hola",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "areas",
+                     "item":  [
+                                  {
+                                      "name":  "GET Listar areas",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/areas",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "POST Crear area",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"name\":\"Area Nueva\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  "http://api.adminsena.test/api/v1/areas",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "GET Ver 1 area (id 2)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/areas/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "PUT Editar area (id 2)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"name\":\"Area Nueva\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  "http://api.adminsena.test/api/v1/areas/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "DELETE Eliminar area (id 2)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  "http://api.adminsena.test/api/v1/areas/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "training-centers",
+                     "item":  [
+                                  {
+                                      "name":  "GET Listar training-centers",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/training-centers",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "POST Crear training center",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"name\":\"Centro Nuevo\",\"location\":\"Bogota\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  "http://api.adminsena.test/api/v1/training-centers",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "GET Ver 1 training center (id 2)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/training-centers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "PUT Editar training center (id 2)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"name\":\"Centro Nuevo\",\"location\":\"Bogota\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  "http://api.adminsena.test/api/v1/training-centers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "DELETE Eliminar training center (id 2)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  "http://api.adminsena.test/api/v1/training-centers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  }
+                              ]
+                 },
+                 {
+                     "name":  "computers",
+                     "item":  [
+                                  {
+                                      "name":  "GET Listar computers",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/computers",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "POST Crear computador",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"number\":\"LAB-PC-NEW\",\"brand\":\"Lenovo\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "POST",
+                                                      "url":  "http://api.adminsena.test/api/v1/computers",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "GET Ver 1 computador (id 2)",
+                                      "request":  {
+                                                      "method":  "GET",
+                                                      "url":  "http://api.adminsena.test/api/v1/computers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "PUT Editar computador (id 2)",
+                                      "request":  {
+                                                      "body":  {
+                                                                   "raw":  "{\"number\":\"LAB-PC-NEW\",\"brand\":\"Lenovo\"}",
+                                                                   "options":  {
+                                                                                   "raw":  {
+                                                                                               "language":  "json"
+                                                                                           }
+                                                                               },
+                                                                   "mode":  "raw"
+                                                               },
+                                                      "method":  "PUT",
+                                                      "url":  "http://api.adminsena.test/api/v1/computers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     },
+                                                                     {
+                                                                         "key":  "Content-Type",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  },
+                                  {
+                                      "name":  "DELETE Eliminar computador (id 2)",
+                                      "request":  {
+                                                      "method":  "DELETE",
+                                                      "url":  "http://api.adminsena.test/api/v1/computers/2",
+                                                      "header":  [
+                                                                     {
+                                                                         "key":  "Accept",
+                                                                         "value":  "application/json"
+                                                                     }
+                                                                 ]
+                                                  }
+                                  }
+                              ]
+                 }
+             ],
+    "info":  {
+                 "description":  "CRUD de las 3 ENTIDADES FUERTES: areas, training-centers, computers. Las entidades debiles (teachers, courses, course-teachers, apprentices) van posteriormente, segun el instructor. Base: http://api.adminsena.test/api/v1 (id de ejemplo: 2, cambialo si borras ese registro).",
+                 "name":  "AdminSENA API v1 (entidades fuertes)",
+                 "schema":  "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+             }
+}
