@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AreasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/areas/create', [AreasController::class, 'create'])
+    ->name('web.areas.create');
+Route::post('/areas', [AreasController::class, 'store'])
+    ->name('web.areas.store');

@@ -10,7 +10,7 @@ class areas extends Model
 {
     use ApiQueryScopes, HasFactory;
 
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'imagen_url', 'imagen_public_id'];
 
     protected function apiQueryOptions(): array
     {
